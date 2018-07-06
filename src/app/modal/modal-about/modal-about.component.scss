@@ -1,0 +1,12 @@
+.modal{
+  & > .title{
+    &:before{
+      background-image: url(../../../assets/images/svg/about-us.svg);
+    }
+  }
+  .text-block{
+    .title{
+      padding: 20px 0;
+    }
+  }
+}

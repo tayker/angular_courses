@@ -1,0 +1,20 @@
+<section id="subscribe">
+  <div class="container">
+    <h2>
+      подписка
+    </h2>
+    <div class="subscribe">
+      <p class="text-info">
+        Подпишись на рассылку новых материалов!
+        Наши подписчики регулярно получают скидки
+        и бесплатные бонусы.
+      </p>
+      <form [formGroup]="subscribeForm" novalidate (ngSubmit)="submit()">
+        <input type="email" placeholder="EMAIL" name="email" formControlName="email">
+        <button>
+            подписаться
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

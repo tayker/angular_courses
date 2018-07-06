@@ -1,0 +1,178 @@
+.modal{
+  padding-bottom: 20px;
+  & > .title{
+   &:before{
+     background-image: url(../../../assets/images/svg/receipt.svg);
+   }
+  }
+
+    h4{
+      text-transform: none;
+      border-radius: 6px;
+      background-color: #fff;
+      padding: 10px;
+      font-size: 16px;
+      color: rgb(27, 32, 36);
+      line-height: 1.125;
+      margin: 0 0 10px 0;
+    }
+
+  form{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    padding: 20px 15px;
+    position: relative;
+    img{
+      max-width: 352px;
+      width: 100%;
+      height: 200px;
+      background-color: black;
+      border-radius: 6px;
+    }
+    [type='email']{
+      width: 100%;
+      padding: 10px 18px;
+      border: 2px solid #53565a;
+      border-radius: 6px;
+      outline: none;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+
+      &:focus{
+        border-color: #eccc68;
+      }
+    }
+    .main{
+      display: flex;
+      flex-wrap: wrap;
+
+      .row{
+        padding-left: 40px;
+      }
+
+      .label{
+        margin: 10px 0;
+        div{
+          line-height: 1.2;
+          font-weight: 600;
+        }
+      }
+      [type="email"]{
+        margin-top: 24px;
+      }
+      .price{
+        font-weight: 600;
+        &-wrapper{
+          position: absolute;
+          bottom: 20px;
+          left: 15px;
+          line-height: 1.5;
+          text-transform: uppercase;
+          background-color: #fff;
+          padding: 10px 16px;
+          border-radius: 6px;
+          max-width: 320px;
+        }
+        &--old{
+          color: #666;
+          text-decoration: line-through;
+          opacity: 0.3;
+        }
+      }
+      .wrapper-btns{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        .button{
+          max-width: 200px;
+          padding:12px 0 12px 60px;
+          text-transform: uppercase;
+          width: 100%;
+          position: relative;
+          &--webmoney{
+            background-color: #036cb5;
+            color: #fff;
+          }
+          .icon{
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: 28px;
+            height: 26px;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+            &--wbm{
+              background-image: url(../../../assets/images/webmoney2.png);
+            }
+            &--wallet-one{
+              width: 50px;
+              height: 28px;
+              background-image: url(../../../assets/images/w2.png);
+            }
+          }
+        }
+      }
+    }
+  }
+  .text-wrapper{
+    padding: 15px;
+
+    .description{
+      font-size: 12px;
+      line-height: 1.2;
+    }
+    .pre-info{
+      margin: 10px 0;
+    }
+    .info{
+      font-weight: 600;
+    }
+  }
+}
+@media screen and (max-width: 800px){
+  .modal{
+    form{
+      flex-wrap: wrap;
+
+      img{
+        display: none;
+      }
+      .main{
+        .row{
+          margin: auto;
+        }
+        .price-wrapper{
+          position: static;
+          margin: 16px auto 0;
+        }
+        .wrapper-btns{
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 482px){
+  .modal{
+    form{
+      .wrapper-btns{
+        flex-direction: column;
+        align-items: center;
+
+        .button{
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

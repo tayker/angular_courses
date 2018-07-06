@@ -1,0 +1,38 @@
+<header>
+  <app-top-banner></app-top-banner>
+  <div class="wrapper" [style.background-image]="getBackground()">
+    <div class="container">
+      <nav [class.active]="isAdaptive">
+        <a [ngx-scroll-to]="'#courses'"
+           [ngx-scroll-to-offset]="-150"
+           (click)="checkedActive()">
+          курсы
+        </a>
+        <a [ngx-scroll-to]="'#subscribe'"
+           (click)="checkedActive()">
+          подписка
+        </a>
+        <a href="" (click)="checkedActive()">
+          гарантии
+        </a>
+        <a class="logo"
+           (click)="checkedActive()"
+            [ngx-scroll-to]="'top'">
+          profit<span class="biggest">s</span>kills
+        </a>
+        <a href="" (click)="checkedActive()">
+          о нас
+        </a>
+        <a href="" (click)="checkedActive()">
+          помощь
+        </a>
+        <a href="" (click)="checkedActive()">
+          добавить курс
+        </a>
+        <a href="" class="nav-btn" (click)="changeAdaptive(); $event.preventDefault()">
+
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,31 @@
+<section id="top">
+  <div class="container">
+    <h1>
+      Интернет курсы по заработку
+    </h1>
+    <blockquote>
+      Если человек тратит деньги на знания, то это уже никто не отнимет у него.
+      <div class="smallest">
+        Самые лучшие инвестиции - это инвестиции в знания.
+      </div>
+      <cite>&copy; Бенджамин Франклин</cite>
+    </blockquote>
+    <ngu-carousel
+      class="slider-wrapper"
+    [inputs]="bannerCarousel"
+    (carouselLoad)="myfunc($event)">
+      <ngu-item NguCarouselItem>
+        <app-banner></app-banner>
+      </ngu-item>
+      <ngu-item NguCarouselItem>
+        <app-banner></app-banner>
+      </ngu-item>
+      <ngu-item NguCarouselItem>
+        <app-banner></app-banner>
+      </ngu-item>
+      <button NguCarouselPrev class='leftRs'></button>
+      <button NguCarouselNext class='rightRs'></button>
+    </ngu-carousel>
+    <app-menu></app-menu>
+  </div>
+</section>

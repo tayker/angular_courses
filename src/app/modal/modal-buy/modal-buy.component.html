@@ -1,0 +1,47 @@
+<div class="modal active" #modal>
+  <button class="close-btn"
+          (click)="modal.classList.remove('active')"></button>
+  <div class="title">
+    купить курс: как побороть лень за 20 дней?
+  </div>
+  <form [formGroup]="buyForm" novalidate>
+    <img src="" alt="">
+    <div class="main">
+      <div class="row">
+        <h4>
+          Kупить курс: как побороть лень за 20 дней?
+        </h4>
+        <label class="label">
+          <div>Укажите Вашу почту:</div>
+          <input type="email" name="email" formControlName="email" placeholder="ВАШ EMAIL">
+        </label>
+        <input type="email" name="emailRepeat" formControlName="emailRepeat" placeholder="ПОВТОРИТЕ ВАШ EMAIL">
+      </div>
+      <div class="price-wrapper">
+        стоимость курса:
+        <span class="price">
+          22200 P / <span class="price price--old">29200 P</span>
+        </span>
+      </div>
+      <div class="wrapper-btns">
+        <button class="button button--webmoney">
+          <span class="icon icon--wbm"></span>
+            оплатить
+        </button>
+        <button class="button button--netmoney">
+          <span class="icon icon--wallet-one"></span>
+            оплатить
+        </button>
+      </div>
+    </div>
+  </form>
+  <div class="text-wrapper">
+    <div class=".description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis nobis minus praesentium corporis illo pariatur suscipit nulla cum, id natus fugiat, doloribus ex excepturi commodi recusandae enim aliquid. Vitae, amet.
+    </div>
+    <div class="pre-info">Чтобы начать обучение:</div>
+    <div class="info">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic ea commodi recusandae laborum illo, quasi eligendi odio a, quia eveniet quo nesciunt at repudiandae adipisci exercitationem. Magni numquam ipsa officiis!
+    </div>
+  </div>
+</div>

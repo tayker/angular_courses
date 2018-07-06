@@ -1,0 +1,140 @@
+.course{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  video{
+    background-color: black;
+    border-radius: 6px;
+    width: auto;
+    height: auto;
+    max-height: 244px;
+    max-width: 466px;
+  }
+  .info{
+    width: 100%;
+    max-width: 640px;
+    &__top{
+      background-color: #6e7f8a;
+      border-radius: 6px;
+      padding: 16px 6px 6px 6px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .count{
+        color: #fff;
+        text-transform: uppercase;
+
+        .highlight{
+          color: #eccc68;
+          font-weight: bold;
+        }
+      }
+      .timer{
+        color: rgb(255, 255, 255);
+        line-height: 1.5;
+        text-transform: uppercase;
+        &__clock{
+          font-weight: bold;
+        }
+      }
+      .button{
+        max-width: 100%;
+        width: 100%;
+        margin-top: 10px;
+
+        &__text{
+          font-size: 16px;
+          line-height: 1.5;
+          font-weight: bold;
+          color: #000;
+        }
+        .price{
+          &-old{
+            font-weight: 400;
+            color: #666;
+            opacity: 0.5;
+            text-decoration: line-through;
+          }
+          &-now{
+            margin: 0 10px;
+            position: relative;
+            &:before, &:after{
+              position: absolute;
+              font-size: 20px;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+
+            &:after{
+              content: "\002F";
+              right: -6px;
+            }
+            &:before{
+              content: "\2010";
+              left: -10px;
+              top: 4px;
+            }
+          }
+        }
+      }
+    }
+    &__main{
+      background-color: #83919b;
+      margin: 0 8px;
+      padding: 12px 20px;
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+
+      .table{
+        width: 100%;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        tr > td{
+          text-align: left;
+          line-height: 1.2;
+          & + td{
+            font-weight: bold;
+            text-align: right;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+    a{
+      background-color: #7c8a93;
+      display: block;
+      margin: 0 8px;
+      padding: 20px 0;
+      border-radius: 0 0 6px 6px;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  .description{
+    color: rgb(39, 61, 76);
+    font-size: 14px;
+    text-align: left;
+    margin-top: 20px;
+    .title{
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.111;
+      margin-bottom: 30px;
+    }
+  }
+}
+@media screen and (max-width: 1170px){
+  .course{
+    video{
+      max-width: 100%;
+      max-height: 100%;
+      max-width: 100%;
+      margin: 0 auto 20px auto;
+    }
+    .info{
+      max-width: 100%;
+    }
+  }
+}

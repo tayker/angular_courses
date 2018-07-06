@@ -1,0 +1,43 @@
+<li>
+  <h3>
+    {{course.title}}
+  </h3>
+  <a routerLink="{{course.courseLink}}" class="img-wrapper">
+    <img src="{{course.img}}" alt="">
+  </a>
+  <a routerLink="{{course.courseLink}}" class="subtitle">
+    {{course.titleSecondary}}
+  </a>
+  <div class="wrapper-main">
+    <table>
+      <tr>
+        <td>Длительность:</td>
+        <td>{{course.durability}}</td>
+      </tr>
+      <tr>
+        <td>Формат:</td>
+        <td>{{course.format}}</td>
+      </tr>
+      <tr>
+        <td>Размер:</td>
+        <td>{{course.size}}</td>
+      </tr>
+    </table>
+    <div class="wrapper-link">
+      <a href="">
+          купить сразу
+      </a>
+      <span class="price-now">
+        {{course.price}}&#8381;
+      </span>
+      <span class="price-old">
+        {{course.oldPrice}}&#8381;
+      </span>
+    </div>
+  </div>
+  <div class="wrapper-btn">
+    <a routerLink="{{course.courseLink}}">
+        подробнее
+    </a>
+  </div>
+</li>

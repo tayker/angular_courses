@@ -1,0 +1,10 @@
+ul{
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1140px) {
+  ul{
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}

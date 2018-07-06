@@ -1,1 +1,183 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: SegoeUI;
+  src: url(./assets/fonts/SegoeUIRegular/SegoeUIRegular.eot);
+  src: url(./assets/fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix) format("embedded-opentype"), url(./assets/fonts/SegoeUIRegular/SegoeUIRegular.woff) format("woff"), url(./assets/fonts/SegoeUIRegular/SegoeUIRegular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400
+}
+
+@font-face {
+  font-family: SegoeUI;
+  src: url(./assets/fonts/SegoeUIBold/SegoeUIBold.eot);
+  src: url(./assets/fonts/SegoeUIBold/SegoeUIBold.eot?#iefix) format("embedded-opentype"), url(./assets/fonts/SegoeUIBold/SegoeUIBold.woff) format("woff"), url(./assets/fonts/SegoeUIBold/SegoeUIBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 700
+}
+
+@font-face {
+  font-family: SegoeUI;
+  src: url(./assets/fonts/SegoeUIItalic/SegoeUIItalic.eot);
+  src: url(./assets/fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix) format("embedded-opentype"), url(./assets/fonts/SegoeUIItalic/SegoeUIItalic.woff) format("woff"), url(./assets/fonts/SegoeUIItalic/SegoeUIItalic.ttf) format("truetype");
+  font-style: italic;
+  font-weight: 400
+}
+
+@font-face {
+  font-family: SegoeUI;
+  src: url(./assets/fonts/SegoeUILight/SegoeUILight.eot);
+  src: url(./assets/fonts/SegoeUILight/SegoeUILight.eot?#iefix) format("embedded-opentype"), url(./assets/fonts/SegoeUILight/SegoeUILight.woff) format("woff"), url(./assets/fonts/SegoeUILight/SegoeUILight.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 300
+}
+
+@font-face {
+  font-family: SegoeUI;
+  src: url(./assets/fonts/SegoeUISemiBold/SegoeUISemiBold.eot);
+  src: url(./assets/fonts/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix) format("embedded-opentype"), url(./assets/fonts/SegoeUISemiBold/SegoeUISemiBold.woff) format("woff"), url(./assets/fonts/SegoeUISemiBold/SegoeUISemiBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 600
+}
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  font-family: SegoeUi, sans-serif
+}
+.container{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+  position: relative;
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+button{
+  cursor: pointer;
+  font-family: inherit;
+  background-color: #eccc68;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  border: none;
+  padding: 10px 20px;
+  display: inline-block;
+}
+::-webkit-scrollbar{
+  width: 8px;
+  background-color: #fff;
+  border-radius: 0 6px 6px 0;
+
+  &-thumb{
+    background-color: #eccc68;
+    border-radius: 6px;
+  }
+}
+h2{
+  font-size: 18px;
+  color: rgb(64, 89, 107);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  padding-top: 28px;
+  margin: 0 0 66px 0;
+  font-weight: 600;
+}
+button, input{
+  outline: none;
+}
+.modal{
+  background-color: #f7f7f7;
+  border-radius: 6px;
+  position: fixed;
+  z-index: 11;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  width: calc(100% - 20px);
+  overflow-y: auto;
+  max-height: calc(100vh - 40px);
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+
+  &.active{
+    top: 50%;
+  }
+  .close-btn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    background-image: url(./assets/images/svg/close-gray.svg);
+    width: 20px;
+    height: 20px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 0;
+    z-index: 1;
+  }
+  .title{
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 14px 20px 14px 60px;
+    position: relative;
+  }
+  & > .title{
+    &:before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+  }
+  .text-block{
+    width: 100%;
+    max-width: 666px;
+    background-color: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin: 60px auto;
+    padding: 0 22px 20px 22px;
+
+    .title{
+      -webkit-border-radius: 6px 6px 0 0;
+      -moz-border-radius: 6px 6px 0 0;
+      border-radius: 6px 6px 0 0;
+      font-size: 24px;
+      text-transform: none;
+    }
+    p{
+      font-size: 14px;
+      color: rgb(0, 0, 0);
+      line-height: 1.2;
+    }
+  }
+}

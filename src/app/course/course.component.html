@@ -1,0 +1,48 @@
+<div class="course">
+  <video src="{{course[0].video}}" controls></video>
+  <div class="info">
+    <div class="info__top">
+      <div class="count"><span class="highlight" id="counter">{{course[0].counter}}</span> купили этот курс</div>
+      <div class="timer">до конца акции осталось <span class="timer__clock"id="timer">
+                <span class="days"><span id="days"></span> дней</span>
+                <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+              </span></div>
+      <button class="button">
+        <span class="button__text">
+          купить
+            <span class="price-now">
+              {{course[0].price}} p
+            </span>
+            <span class="price-old">
+              {{course[0].priceOld}} p
+            </span>
+        </span>
+      </button>
+    </div>
+    <div class="info__main">
+      <table class="table">
+        <tr>
+          <td>Длительность:</td>
+          <td>{{course[0].durability}}</td>
+        </tr>
+        <tr>
+          <td>Формат:</td>
+          <td>{{course[0].format}}</td>
+        </tr>
+        <tr>
+          <td>Размер:</td>
+          <td>{{course[0].size}}</td>
+        </tr>
+      </table>
+    </div>
+    <a href="">
+      отзывы о курсах в нашем сообществе вк
+    </a>
+  </div>
+  <div class="description">
+    <div class="title">
+      описание:
+    </div>
+    {{course[0].description}}
+  </div>
+</div>
