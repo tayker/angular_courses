@@ -1,5 +1,6 @@
-<app-header></app-header>
+<app-header (onFocused)="onFocused()"></app-header>
 <app-section-main></app-section-main>
 <router-outlet></router-outlet>
-<app-section-subscribe></app-section-subscribe>
+<app-section-subscribe [subscribeFocused]='subscribeFocused'></app-section-subscribe>
 <app-footer></app-footer>
+<app-modal-window></app-modal-window>

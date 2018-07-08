@@ -5,31 +5,33 @@
       <nav [class.active]="isAdaptive">
         <a [ngx-scroll-to]="'#courses'"
            [ngx-scroll-to-offset]="-150"
-           (click)="checkedActive()">
+           (click)="checkedActive()"
+           routerLink="">
           курсы
         </a>
         <a [ngx-scroll-to]="'#subscribe'"
-           (click)="checkedActive()">
+           [ngx-scroll-to-offset]="-94"
+           (click)="checkedActive(); focusedEl()">
           подписка
         </a>
-        <a href="" (click)="checkedActive()">
+        <a (click)="checkedActive(); openModal('garant')">
           гарантии
         </a>
         <a class="logo"
            (click)="checkedActive()"
             [ngx-scroll-to]="'top'">
-          profit<span class="biggest">s</span>kills
+          profit<span class="biggest">s</span>kill
         </a>
-        <a href="" (click)="checkedActive()">
+        <a (click)="checkedActive(); openModal('about')">
           о нас
         </a>
-        <a href="" (click)="checkedActive()">
+        <a (click)="checkedActive(); openModal('help')">
           помощь
         </a>
-        <a href="" (click)="checkedActive()">
+        <a (click)="checkedActive(); openModal('addCourse')">
           добавить курс
         </a>
-        <a href="" class="nav-btn" (click)="changeAdaptive(); $event.preventDefault()">
+        <a class="nav-btn" (click)="changeAdaptive(); $event.preventDefault()">
 
         </a>
       </nav>

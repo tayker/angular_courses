@@ -72,6 +72,15 @@ button{
   border: none;
   padding: 10px 20px;
   display: inline-block;
+  transition: .3s;
+  transform: translate3d(0,0,0);
+	&:hover{
+		opacity: 0.7;
+	}
+	&:active{
+		opacity: 1;
+		filter: contrast(120%);
+	}
 }
 ::-webkit-scrollbar{
   width: 8px;

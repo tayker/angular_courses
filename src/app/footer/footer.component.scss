@@ -49,9 +49,16 @@ footer{
             -webkit-background-size: cover;
             background-size: cover;
             background-position: center;
+			transition: .3s;
+			  
           }
           .vk{
             background-image: url(../../assets/images/svg/vk.svg);
+			filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+			  
+			  &:hover{
+				  filter: none;
+			  }
           }
           .yt{
             background-image: url(../../assets/images/svg/youtube.svg);
@@ -59,6 +66,10 @@ footer{
             -webkit-border-radius: 10px;
             -moz-border-radius: 10px;
             border-radius: 10px;
+			box-shadow: 0 0 2px rgba(0,0,0,0.5);
+			  &:hover{
+				  box-shadow: none;
+			  }
           }
         }
       }

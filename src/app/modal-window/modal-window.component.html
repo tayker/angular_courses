@@ -1,0 +1,7 @@
+
+<app-modal-about *ngIf="currentModal() == 'about'"></app-modal-about>
+<app-modal-add-course *ngIf="currentModal() == 'addCourse'"></app-modal-add-course>
+<app-modal-buy *ngIf="currentModal() == 'buy'"></app-modal-buy>
+<app-modal-garant *ngIf="currentModal() == 'garant'"></app-modal-garant>
+<app-modal-help *ngIf="currentModal() == 'help'"></app-modal-help>
+<div class="overlay" *ngIf="currentModal()" (click)="hideModal()"></div>

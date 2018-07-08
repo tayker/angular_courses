@@ -23,11 +23,12 @@ import { ModalAddCourseComponent } from './modal/modal-add-course/modal-add-cour
 import { ModalBuyComponent } from './modal/modal-buy/modal-buy.component';
 import { SectionCourseComponent } from './section-course/section-course.component';
 import { CourseComponent } from './course/course.component';
+import { ModalWindowComponent } from './modal-window/modal-window.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: SectionCoursesComponent },
-  { path: 'course', component: SectionCourseComponent }
+  { path: 'course/:courseLink', component: SectionCourseComponent }
 ];
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ const appRoutes: Routes = [
     ModalAddCourseComponent,
     ModalBuyComponent,
     SectionCourseComponent,
-    CourseComponent
+    CourseComponent,
+    ModalWindowComponent
   ],
   imports: [
     BrowserModule,

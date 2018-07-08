@@ -5,7 +5,7 @@
   video{
     background-color: black;
     border-radius: 6px;
-    width: auto;
+    width: 100%;
     height: auto;
     max-height: 244px;
     max-width: 466px;
@@ -42,7 +42,8 @@
         max-width: 100%;
         width: 100%;
         margin-top: 10px;
-
+		transition: .3s;
+		text-transform: uppercase;
         &__text{
           font-size: 16px;
           line-height: 1.5;
@@ -109,6 +110,10 @@
       color: #fff;
       text-align: center;
       text-transform: uppercase;
+	  transition: .3s;
+		&:hover{
+			opacity: 0.7;
+		}
     }
   }
   .description{

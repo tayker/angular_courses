@@ -7,8 +7,8 @@ header{
   nav{
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    padding: 20px 0;
+    align-items: center;
+    padding: 10px 0 14px 0;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     -ms-transition: all .3s;
@@ -26,7 +26,7 @@ header{
       -o-transition: color .3s;
       cursor: pointer;
       transition: color .3s;
-
+	  user-select: none;
       &:hover{
         &:not(.logo){
           color: #eccc68;
@@ -34,13 +34,13 @@ header{
       }
 
       &.logo{
-          font-size: 30px;
+          font-size: 26px;
           color: rgb(255, 255, 255);
           font-weight: bold;
           line-height: 0.8;
 
         .biggest{
-          font-size: 36px;
+          font-size: 30px;
         }
       }
       &.nav-btn{

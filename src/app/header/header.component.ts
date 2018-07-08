@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
-
+import { ModalService } from '../modal.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,9 +9,11 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browse
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private sanitizer: DomSanitizer ) { }
-
-  private isAdaptive: boolean = false;
+  constructor(private sanitizer: DomSanitizer,
+			  private modalService: ModalService) { }
+  
+  @Output() onFocused = new EventEmitter<any>();
+  public isAdaptive: boolean = false;
 
   ngOnInit() {
   }
@@ -25,5 +27,11 @@ export class HeaderComponent implements OnInit {
     if(this.isAdaptive){
       this.isAdaptive = !this.isAdaptive;
     }
+  }
+  focusedEl(){
+	  this.onFocused.emit();
+  }
+  openModal(e){
+	  this.modalService.openModal(e);
   }
 }

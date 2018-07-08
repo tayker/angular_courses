@@ -29,17 +29,21 @@
     line-height: 1.2;
     font-size: 14px;
     font-weight: 600;
+	cursor: pointer;
     a{
       display: block;
       color: rgb(255, 255, 255);
-      padding: 16px 16px 16px 54px;
+      padding: 16px 16px 16px 64px;
       position: relative;
       font-size: 12px;
     }
+	  	&:last-child{
+			a{
+				padding: 16px 24px 16px 62px;
+			}
+		}
     &:hover{
-      &:not(:first-child){
         background-color: #74848e;
-      }
       .icon{
         animation:.3s menu_icon_anim;
 
@@ -53,9 +57,9 @@
         }
       }
     }
-    &:first-child{
-      padding: 0 18px;
-    }
+	  &.current{
+		  background-color: #344a5a;
+	  }
     .icon{
       position: absolute;
       -webkit-transition: all .3s;
@@ -71,7 +75,7 @@
       backface-visibility: hidden;
       width: 20px;
       height: 20px;
-      left: 10px;
+      left: 26px;
       top: 50%;
       transform: translateY(-50%) translateZ(0);
       will-change: transform;
@@ -91,6 +95,9 @@
       &--scheme{
         background-image: url(../../assets/images/svg/scheme.svg);
       }
+		&--books{
+			background-image: url(../../assets//images//svg/books.svg);
+		}
     }
   }
 }
@@ -106,11 +113,6 @@
   .menu{
     li{
       width: 100%;
-
-      &:first-child{
-        text-align: left;
-        padding: 20px 10px;
-      }
     }
   }
 }

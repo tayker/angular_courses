@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scroll-to';
 import { DataService } from '../data.service';
-
+import { SectionCoursesComponent } from '../section-courses/section-courses.component';
 @Component({
   selector: 'app-section-course',
   templateUrl: './section-course.component.html',
@@ -12,7 +12,7 @@ export class SectionCourseComponent implements OnInit {
 
   course;
   constructor(private scrollToService: ScrollToService,
-              private dataService: DataService) { }
+              private dataService: DataService) {}
 
   public triggerScrollTo(){
     const config: ScrollToConfigOptions = {
@@ -22,7 +22,6 @@ export class SectionCourseComponent implements OnInit {
     this.scrollToService.scrollTo(config);
   }
   ngOnInit(){
-    this.course = this.dataService.getCoursesPreviewList();
     this.triggerScrollTo();
   }
 
