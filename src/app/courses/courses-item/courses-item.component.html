@@ -2,7 +2,7 @@
   <h3>
     {{course.title}}
   </h3>
-  <a routerLink="{{course.courseLink}}" class="img-wrapper">
+  <a [routerLink]="['/course', course.courseLink]" class="img-wrapper">
     <img src="{{course.img}}" alt="">
   </a>
   <a routerLink="{{course.courseLink}}" class="subtitle">

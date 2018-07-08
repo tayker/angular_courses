@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { NguCarouselModule } from '@ngu/carousel';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -24,11 +25,13 @@ import { ModalBuyComponent } from './modal/modal-buy/modal-buy.component';
 import { SectionCourseComponent } from './section-course/section-course.component';
 import { CourseComponent } from './course/course.component';
 import { ModalWindowComponent } from './modal-window/modal-window.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: SectionCoursesComponent },
-  { path: 'course/:courseLink', component: SectionCourseComponent }
+  { path: 'course/:courseLink', component: SectionCourseComponent },
+  { path: 'not-found', component: NotFoundComponent }
 ];
 @NgModule({
   declarations: [
@@ -50,12 +53,14 @@ const appRoutes: Routes = [
     ModalBuyComponent,
     SectionCourseComponent,
     CourseComponent,
-    ModalWindowComponent
+    ModalWindowComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     NguCarouselModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     ScrollToModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ModalService } from '../modal.service';
 
 @Component({
   selector: 'app-course',
@@ -8,9 +9,16 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CourseComponent implements OnInit {
 
   @Input() course;
-  constructor() { }
+
+  constructor(
+    private modalService: ModalService
+  ) { }
 
   ngOnInit() {
+  }
+
+  onBuyBtnClick() {
+    this.modalService.openModal("buy", this.course);
   }
 
 }

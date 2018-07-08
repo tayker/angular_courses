@@ -5,9 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class ModalService {
 
-  constructor() {}
+	constructor() {}
+	
+	currentModalData: Object;
+
 	currentModal: string;
-	openModal(e){
+	openModal(e, data?){
+		this.currentModalData = data;
 		this.currentModal = e;
 	}
 

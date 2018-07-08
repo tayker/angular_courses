@@ -1,4 +1,4 @@
-<div class="modal active" #modal>
+<div class="modal active" [@modalAnimation] #modal>
   <button class="close-btn"
           (click)="modal.classList.remove('active')"></button>
   <div class="title">
@@ -20,7 +20,7 @@
       <div class="price-wrapper">
         стоимость курса:
         <span class="price">
-          22200 P / <span class="price price--old">29200 P</span>
+          {{ courseInfo.price }} P / <span class="price price--old">{{ courseInfo.oldPrice }} P</span>
         </span>
       </div>
       <div class="wrapper-btns">

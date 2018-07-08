@@ -1,21 +1,21 @@
-<!--
+
 <div class="course">
-  <video src="{{course[0].video}}" controls></video>
+  <video src="{{course.video}}" controls></video>
   <div class="info">
     <div class="info__top">
-      <div class="count"><span class="highlight" id="counter">{{course[0].counter}}</span> купили этот курс</div>
+      <div class="count"><span class="highlight" id="counter">{{course.counter}}</span> купили этот курс</div>
       <div class="timer">до конца акции осталось <span class="timer__clock"id="timer">
                 <span class="days"><span id="days"></span> дней</span>
                 <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
               </span></div>
-      <button class="button">
+      <button class="button" (click)="onBuyBtnClick()">
         <span class="button__text">
           купить
             <span class="price-now">
-              {{course[0].price}} &#8381;
+              {{course.price}} &#8381;
             </span>
             <span class="price-old">
-              {{course[0].priceOld}} &#8381;
+              {{course.priceOld}} &#8381;
             </span>
         </span>
       </button>
@@ -24,15 +24,15 @@
       <table class="table">
         <tr>
           <td>Длительность:</td>
-          <td>{{course[0].durability}}</td>
+          <td>{{course.durability}}</td>
         </tr>
         <tr>
           <td>Формат:</td>
-          <td>{{course[0].format}}</td>
+          <td>{{course.format}}</td>
         </tr>
         <tr>
           <td>Размер:</td>
-          <td>{{course[0].size}}</td>
+          <td>{{course.size}}</td>
         </tr>
       </table>
     </div>
@@ -44,7 +44,7 @@
     <div class="title">
       описание:
     </div>
-    {{course[0].description}}
+    {{course.description}}
   </div>
 </div>
--->
+

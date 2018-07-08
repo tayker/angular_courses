@@ -1,8 +1,8 @@
 <section id="courses">
   <div class="container">
     <h2>
-      <a routerLink="">полезные навыки</a> <span class="current-link"> &#62; </span>
+      <a routerLink="">полезные навыки</a> <span class="current-link"> &#62; {{ activeCourse.titleSecondary }} </span>
     </h2>
-    <app-course></app-course>
+    <app-course [course]="activeCourse"></app-course>
   </div>
 </section>
