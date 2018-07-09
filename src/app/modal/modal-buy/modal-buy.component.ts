@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {trigger, transition, style, animate, state, group} from '@angular/animations'
 
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ModalService } from '../../modal.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-modal-buy',
@@ -32,20 +32,30 @@ export class ModalBuyComponent implements OnInit {
 
   courseInfo: Object;
 
+  email: string = "";
+  repeatEmail: string = "";
+  courseId: string = "";
+
   animationTrigger = true;
 
-  buyForm: FormGroup = new FormGroup({
-    'email': new FormControl('', Validators. required),
-    'emailRepeat': new FormControl('', Validators.required)
-  });
   constructor(
-    private modalService: ModalService
+    private modalService: ModalService,
+    private http: HttpClient
   ) { 
     this.courseInfo = modalService.currentModalData;
   }
 	hideModal(e){
 		this.modalService.openModal(e);
-	}
+  }
+  
+  isFormValid() {
+    let emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+
+    if(this.email != this.repeatEmail) return {valid: false, error: "repeat-email"};
+    if(!emailPattern.test(this.email)) return {valid: false, error: "incorrect-format"};
+
+    return {valid: true, error: ""};
+  }
 
   ngOnInit() {
   }

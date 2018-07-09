@@ -1,11 +1,11 @@
-<div class="modal active" [@modalAnimation]>
+<div class="modal" [@modalAnimation]>
   <button class="close-btn"
           (click)="hideModal('')"></button>
   <div class="title">
     купить курс: как побороть лень за 20 дней?
   </div>
-  <form [formGroup]="buyForm" novalidate>
-    <img src="" alt="">
+  <form method="POST" ngNoForm>
+    <img src="/assets/images{{ courseInfo.img }}" alt="">
     <div class="main">
       <div class="row">
         <h4>
@@ -13,22 +13,23 @@
         </h4>
         <label class="label">
           <div>Укажите Вашу почту:</div>
-          <input type="email" name="email" formControlName="email" placeholder="ВАШ EMAIL">
+          <input type="email" name="email" placeholder="ВАШ EMAIL" [(ngModel)]="email" required>
         </label>
-        <input type="email" name="emailRepeat" formControlName="emailRepeat" placeholder="ПОВТОРИТЕ ВАШ EMAIL">
+        <input type="email" name="repeatEmail" placeholder="ПОВТОРИТЕ ВАШ EMAIL" [(ngModel)]="repeatEmail" required>
+        <input type="hidden" [(ngModel)]="courseInfo.id" name="id">
       </div>
       <div class="price-wrapper">
         стоимость курса:
         <span class="price">
-          {{ courseInfo.price }} P / <span class="price price--old">{{ courseInfo.oldPrice }} P</span>
+          {{ courseInfo.price }} P / <span class="price price--old">{{ courseInfo.priceOld }} P</span>
         </span>
       </div>
       <div class="wrapper-btns">
-        <button class="button button--webmoney">
+        <button [disabled]="!isFormValid().valid" type="submit" formaction="/setorderWM.php" class="button button--webmoney">
           <span class="icon icon--wbm"></span>
             оплатить
         </button>
-        <button class="button button--netmoney">
+        <button [disabled]="!isFormValid().valid" formaction="/setorder.php" class="button button--netmoney">
           <span class="icon icon--wallet-one"></span>
             оплатить
         </button>

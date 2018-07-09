@@ -3,6 +3,13 @@
     <h2>
       все курсы
     </h2>
-    <app-courses [courses]="courses"></app-courses>
+
+    <div class="preloader" *ngIf="!isLoaded()">
+      <div class="spiner">
+
+      </div>
+    </div>
+
+    <app-courses *ngIf="isLoaded()" [courses]="getCoursesList()"></app-courses>
   </div>
 </section>

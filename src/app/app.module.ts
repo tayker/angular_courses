@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { NguCarouselModule } from '@ngu/carousel';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -26,12 +26,13 @@ import { SectionCourseComponent } from './section-course/section-course.componen
 import { CourseComponent } from './course/course.component';
 import { ModalWindowComponent } from './modal-window/modal-window.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const appRoutes: Routes = [
   { path: '', component: SectionCoursesComponent },
   { path: 'course/:courseLink', component: SectionCourseComponent },
-  { path: 'not-found', component: NotFoundComponent }
+  { path: '**', redirectTo: "" }
 ];
 @NgModule({
   declarations: [
@@ -59,8 +60,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     NguCarouselModule,
+    FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     ScrollToModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],

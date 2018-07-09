@@ -10,16 +10,29 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SectionCoursesComponent implements OnInit {
 
-  courses = [];
   constructor(
     private dataService: DataService
   ) {
-    dataService.getCoursesList().subscribe(data => {
-		this.courses = data;
-	});
+    this.dataService.isLoadedEvent.subscribe( 
+      value => {},
+      error => {},
+      finish => {
+        this.loaded = true;
+    });
   }
 
+  loaded = false;
+
   ngOnInit() {
+
+  }
+
+  getCoursesList() {
+    return this.dataService.getCoursesList();
+  }
+
+  isLoaded(): boolean {
+    return this.loaded;
   }
 
 }

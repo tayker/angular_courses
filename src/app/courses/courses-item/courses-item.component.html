@@ -2,10 +2,10 @@
   <h3>
     {{course.title}}
   </h3>
-  <a [routerLink]="['/course', course.courseLink]" class="img-wrapper">
-    <img src="{{course.img}}" alt="">
+  <a [routerLink]="['/course', course.routerLink]" class="img-wrapper">
+    <img src="/assets/images/{{course.img}}" alt="">
   </a>
-  <a [routerLink]="['/course', course.courseLink]" class="subtitle">
+  <a [routerLink]="['/course', course.routerLink]" class="subtitle">
     {{course.titleSecondary}}
   </a>
   <div class="wrapper-main">
@@ -31,12 +31,12 @@
         {{course.price}}&#8381;
       </span>
       <span class="price-old">
-        {{course.oldPrice}}&#8381;
+        {{course.priceOld}}&#8381;
       </span>
     </div>
   </div>
   <div class="wrapper-btn">
-    <a [routerLink]="['/course', course.courseLink]">
+    <a [routerLink]="['/course', course.routerLink]">
         подробнее
     </a>
   </div>

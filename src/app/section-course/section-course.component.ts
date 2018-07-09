@@ -15,14 +15,25 @@ export class SectionCourseComponent implements OnInit {
 
   activeCourse: Object;
 
+  loaded = false;
+
   constructor(
     private scrollToService: ScrollToService,
     private dataService: DataService,
     private route: ActivatedRoute
   ) {
-    this.course = this.route.snapshot.params['courseLink'];
+    this.dataService.isLoadedEvent.subscribe( 
+      value => {},
+      error => {},
+      finish => {
+        this.course = this.route.snapshot.params['courseLink'];
+        this.activeCourse = this.dataService.getCourseByLink(this.course);
+        this.loaded = true;
+    });
+  }
 
-    this.activeCourse = this.dataService.getCourseByLink(this.course);
+  isLoaded() {
+    return this.loaded;
   }
 
   public triggerScrollTo(){
