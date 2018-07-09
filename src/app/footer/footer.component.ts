@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ModalService } from '../modal.service';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService: ModalService) { }
 
   ngOnInit() {
   }
 
+  openModal(e){
+	  this.modalService.openModal(e);
+  }
 }

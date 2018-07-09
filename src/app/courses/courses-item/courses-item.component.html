@@ -5,7 +5,7 @@
   <a [routerLink]="['/course', course.courseLink]" class="img-wrapper">
     <img src="{{course.img}}" alt="">
   </a>
-  <a routerLink="{{course.courseLink}}" class="subtitle">
+  <a [routerLink]="['/course', course.courseLink]" class="subtitle">
     {{course.titleSecondary}}
   </a>
   <div class="wrapper-main">
@@ -36,7 +36,7 @@
     </div>
   </div>
   <div class="wrapper-btn">
-    <a routerLink="{{course.courseLink}}">
+    <a [routerLink]="['/course', course.courseLink]">
         подробнее
     </a>
   </div>

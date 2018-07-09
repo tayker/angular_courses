@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DataService } from '../data.service';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+  }
+  sortByCategory(sort){
+	  this.dataService.sortCourses(sort);
   }
 
 }

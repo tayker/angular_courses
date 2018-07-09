@@ -1,6 +1,6 @@
-<div class="modal" #modal>
+<div class="modal" [@modalAnimation]>
   <button class="close-btn"
-  (click)="modal.classList.remove('active')"></button>
+  (click)="hideModal('')"></button>
   <div class="title">
     гарантия возврата средств и доставка курсов
   </div>

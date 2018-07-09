@@ -14,7 +14,9 @@ export class SectionCoursesComponent implements OnInit {
   constructor(
     private dataService: DataService
   ) {
-    this.courses = dataService.getCoursesList();
+    dataService.getCoursesList().subscribe(data => {
+		this.courses = data;
+	});
   }
 
   ngOnInit() {

@@ -3,7 +3,6 @@ import {trigger, transition, style, animate, state, group} from '@angular/animat
 
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ModalService } from '../../modal.service';
-import { stat } from 'fs';
 
 @Component({
   selector: 'app-modal-buy',
@@ -44,6 +43,9 @@ export class ModalBuyComponent implements OnInit {
   ) { 
     this.courseInfo = modalService.currentModalData;
   }
+	hideModal(e){
+		this.modalService.openModal(e);
+	}
 
   ngOnInit() {
   }

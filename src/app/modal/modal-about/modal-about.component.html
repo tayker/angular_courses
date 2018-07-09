@@ -1,6 +1,6 @@
-<div class="modal active" #modal>
+<div class="modal active" [@modalAnimation]>
   <button class="close-btn"
-          (click)="modal.classList.remove('active')"></button>
+          (click)="hideModal('')"></button>
   <div class="title">
     о нас / сотрудничество с нами
   </div>

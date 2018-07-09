@@ -6,7 +6,7 @@
           profit<span class="biggest">s</span>kill
         </a>
         <div class="title">площадка онлайн курсов</div>
-        <a href="" class="add-course">
+        <a (click)="openModal('addCourse')" class="add-course">
           вы можете добавить свой курс
         </a>
       </div>
@@ -14,10 +14,10 @@
         <nav>
           <a [ngx-scroll-to]="'#courses'"
              [ngx-scroll-to-offset]="-150">Курсы</a>
-          <a href="">О нас</a>
+          <a (click)="openModal('about')">О нас</a>
           <a [ngx-scroll-to]="'#subscribe'">Подписка</a>
-          <a href="">Помощь</a>
-          <a href="">Гарантии</a>
+          <a (click)="openModal('help')">Помощь</a>
+          <a (click)="openModal('garant')">Гарантии</a>
         </nav>
         <div class="help">
           <div class="title">
