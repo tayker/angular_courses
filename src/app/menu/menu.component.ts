@@ -11,8 +11,9 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
   }
+  current: string = 'all';
   sortByCategory(sort){
+    this.current  = sort;
 	  this.dataService.sortCourses(sort);
   }
-
 }

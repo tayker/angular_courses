@@ -1,8 +1,8 @@
 <ul class="menu">
-  <li class="current"><a (click)="sortByCategory('all')"><span class="icon icon--books"></span>все курсы</a></li>
-  <li><a (click)="sortByCategory('business')"><span class="icon icon--person"></span>бизнес с нуля</a></li>
-  <li><a (click)="sortByCategory('seo')"><span class="icon icon--graph"></span>seo продвижение</a></li>
-  <li><a (click)="sortByCategory('useful')"><span class="icon icon--road"></span>полезные навыки</a></li>
-  <li><a (click)="sortByCategory('internet earning')"><span class="icon icon--idea"></span>заработок в интернете</a></li>
-  <li><a (click)="sortByCategory('schemes')"><span class="icon icon--scheme"></span>готовые схемы</a></li>
+  <li><a [class.current]="current == 'all'" (click)="sortByCategory('all')"><span class="icon icon--books"></span>все курсы</a></li>
+  <li><a [class.current]="current == 'business'" (click)="sortByCategory('business')"><span class="icon icon--person"></span>бизнес с нуля</a></li>
+  <li><a [class.current]="current == 'seo'" (click)="sortByCategory('seo')"><span class="icon icon--graph"></span>seo продвижение</a></li>
+  <li><a [class.current]="current == 'useful'" (click)="sortByCategory('useful')"><span class="icon icon--road"></span>полезные навыки</a></li>
+  <li><a [class.current]="current == 'work'" (click)="sortByCategory('work')"><span class="icon icon--idea"></span>заработок в интернете</a></li>
+  <li><a [class.current]="current == 'schemes'" (click)="sortByCategory('schemes')"><span class="icon icon--scheme"></span>готовые схемы</a></li>
 </ul>

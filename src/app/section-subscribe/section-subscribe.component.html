@@ -9,9 +9,14 @@
         Наши подписчики регулярно получают скидки
         и бесплатные бонусы.
       </p>
-      <form [formGroup]="subscribeForm" novalidate (ngSubmit)="submit()">
-        <input type="email" placeholder="EMAIL" name="email" formControlName="email">
-        <button>
+      <form method="POST" ngNoForm action="/subscribe.php">
+        <div class="wrapper-input">
+          <input type="email" placeholder="EMAIL" name="email" [(ngModel)]="email" required>
+          <div *ngIf="!isFormValid().valid && email !== ''">
+            {{isFormValid().error}}
+          </div>
+        </div>
+        <button [disabled]="!isFormValid().valid">
             подписаться
         </button>
       </form>

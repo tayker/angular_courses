@@ -10,18 +10,18 @@ export class SectionSubscribeComponent implements OnInit {
 
   @Input() subscribeFocused;
   subscribeForm: FormGroup;
-	
-  constructor() {
-    this.subscribeForm = new FormGroup({
-      "email": new FormControl('', Validators.email)
-    })
-  }
+  email: string = '';
+  constructor() {}
 
-  submit(){
-    console.log(this.subscribeForm);
+  isFormValid(){
+    let emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+
+    if(!emailPattern.test(this.email)) return {valid: false, error: "Неправильный формат"};
+
+    return {valid: true, error: ""};
   }
   ngOnInit() {
-	  
+
   }
 
 }

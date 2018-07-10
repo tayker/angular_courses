@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {trigger, transition, style, animate, state, group} from '@angular/animations'
 
 import { ModalService } from '../../modal.service';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-modal-buy',
@@ -39,20 +38,19 @@ export class ModalBuyComponent implements OnInit {
   animationTrigger = true;
 
   constructor(
-    private modalService: ModalService,
-    private http: HttpClient
-  ) { 
+    private modalService: ModalService
+  ) {
     this.courseInfo = modalService.currentModalData;
   }
 	hideModal(e){
 		this.modalService.openModal(e);
   }
-  
+
   isFormValid() {
     let emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 
-    if(this.email != this.repeatEmail) return {valid: false, error: "repeat-email"};
-    if(!emailPattern.test(this.email)) return {valid: false, error: "incorrect-format"};
+    if(this.email != this.repeatEmail) return {valid: false, error: "Почта должна совпадать в обох полях"};
+    if(!emailPattern.test(this.email)) return {valid: false, error: "Неправильный формат"};
 
     return {valid: true, error: ""};
   }

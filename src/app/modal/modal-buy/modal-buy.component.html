@@ -16,6 +16,9 @@
           <input type="email" name="email" placeholder="ВАШ EMAIL" [(ngModel)]="email" required>
         </label>
         <input type="email" name="repeatEmail" placeholder="ПОВТОРИТЕ ВАШ EMAIL" [(ngModel)]="repeatEmail" required>
+        <div *ngIf="!isFormValid().valid && email !== ''">
+          {{isFormValid().error}}
+        </div>
         <input type="hidden" [(ngModel)]="courseInfo.id" name="id">
       </div>
       <div class="price-wrapper">
