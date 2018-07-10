@@ -3,10 +3,10 @@
   <iframe src="{{course.video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   <div class="info">
     <div class="info__top">
-      <div class="count"><span class="highlight" id="counter">{{course.counter}}</span> купили этот курс</div>
+      <div class="count"><span class="highlight" id="counter">{{course.buyCounter}}</span> купили этот курс</div>
       <div class="timer">до конца акции осталось <span class="timer__clock"id="timer">
-                <span class="days"><span id="days"></span> дней</span>
-                <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+                <span class="days">{{days}}<span></span> дней</span>
+                <span> {{hours}}</span>:<span>{{minutes}}</span>:<span>{{seconds}}</span>
               </span></div>
       <button class="button" (click)="onBuyBtnClick()">
         <span class="button__text">

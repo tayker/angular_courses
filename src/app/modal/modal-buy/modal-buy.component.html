@@ -2,14 +2,14 @@
   <button class="close-btn"
           (click)="hideModal('')"></button>
   <div class="title">
-    купить курс: как побороть лень за 20 дней?
+    купить курс: {{courseInfo.titleSecondary}}
   </div>
   <form method="POST" ngNoForm>
     <img src="/assets/images{{ courseInfo.img }}" alt="">
     <div class="main">
       <div class="row">
         <h4>
-          Kупить курс: как побороть лень за 20 дней?
+          Kупить курс: {{courseInfo.titleSecondary}}
         </h4>
         <label class="label">
           <div>Укажите Вашу почту:</div>
@@ -41,11 +41,13 @@
   </form>
   <div class="text-wrapper">
     <div class=".description">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis nobis minus praesentium corporis illo pariatur suscipit nulla cum, id natus fugiat, doloribus ex excepturi commodi recusandae enim aliquid. Vitae, amet.
+      {{courseInfo.description}}
     </div>
+<!--
     <div class="pre-info">Чтобы начать обучение:</div>
     <div class="info">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic ea commodi recusandae laborum illo, quasi eligendi odio a, quia eveniet quo nesciunt at repudiandae adipisci exercitationem. Magni numquam ipsa officiis!
     </div>
+-->
   </div>
 </div>

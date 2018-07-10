@@ -33,6 +33,9 @@ export class ModalAboutComponent implements OnInit {
 	hideModal(e){
 		this.ms.openModal(e);
 	}
+	openModal(e){
+		this.ms.openModal(e);
+	}
   ngOnInit() {
   }
 
