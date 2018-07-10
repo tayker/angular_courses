@@ -18,7 +18,7 @@ export class CourseComponent implements OnInit {
   timer = {}
 
   getTimer(){
-    let countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+    let countDownDate = new Date("Sep 1, 2018 00:00:00").getTime();
     let now: any = new Date().getTime();
     let distance = countDownDate - now;
 

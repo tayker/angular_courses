@@ -1,0 +1,31 @@
+:host{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+.title{
+	font-size: 24px;
+}
+.timer{
+	color: #eccc68;
+	font-size: 30px;
+	&-wrap{
+		font-size: 24px;
+	}
+}
+  button{
+    color: rgb(106, 92, 47);
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 300px;
+	margin-top: 20px;
+  }
+@media screen and (max-width: 456px) {
+	button{
+		max-width: 220px;
+	}
+}

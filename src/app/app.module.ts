@@ -27,6 +27,7 @@ import { CourseComponent } from './course/course.component';
 import { ModalWindowComponent } from './modal-window/modal-window.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BannerTimerComponent } from './banner/banner-timer/banner-timer.component';
 
 
 const appRoutes: Routes = [
@@ -55,7 +56,8 @@ const appRoutes: Routes = [
     SectionCourseComponent,
     CourseComponent,
     ModalWindowComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    BannerTimerComponent
   ],
   imports: [
     BrowserModule,

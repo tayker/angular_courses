@@ -1,12 +1,14 @@
 
 <div class="course">
-  <iframe [src]="course.videoUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <div class="wrapper-video">
+  	<iframe [src]="course.videoUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
   <div class="info">
     <div class="info__top">
       <div class="count"><span class="highlight" id="counter">{{course.buyCounter}}</span> купили этот курс</div>
       <div class="timer">до конца акции осталось <span class="timer__clock"id="timer">
-                <span class="days">{{timer.days}}<span></span> дней</span>
-                <span> {{timer.hours}}</span>:<span>{{timer.minutes}}</span>:<span>{{timer.seconds}}</span>
+                <span class="days">{{timer.days}}<span></span> дней </span>
+                <span><span *ngIf="timer.hours < 10">0</span>{{timer.hours}}</span>:<span><span *ngIf="timer.minutes < 10">0</span>{{timer.minutes}}</span>:<span><span *ngIf="timer.seconds < 10">0</span>{{timer.seconds}}</span>
               </span></div>
       <button class="button" (click)="onBuyBtnClick()">
         <span class="button__text">
@@ -36,7 +38,7 @@
         </tr>
       </table>
     </div>
-    <a href="">
+    <a href="https://vk.com/profitskill">
       отзывы о курсах в нашем сообществе вк
     </a>
   </div>
