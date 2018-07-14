@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SectionCoursesComponent implements OnInit {
 
+  currentCategory: string;
   constructor(
     private dataService: DataService
   ) {
@@ -33,6 +34,13 @@ export class SectionCoursesComponent implements OnInit {
 
   isLoaded(): boolean {
     return this.loaded;
+  }
+  
+  getCurrentCategory(){
+    if(this.dataService.categoryTitle == undefined){
+      return 'все курсы'
+    }
+    else { return this.dataService.categoryTitle;}
   }
 
 }

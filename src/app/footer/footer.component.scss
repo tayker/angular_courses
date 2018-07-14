@@ -40,7 +40,7 @@ footer{
         .social{
           display: flex;
           justify-content: space-between;
-          max-width: 120px;
+          max-width: 80px;
           margin: auto;
           a{
             width: 50px;
@@ -50,26 +50,28 @@ footer{
             background-size: cover;
             background-position: center;
 			transition: .3s;
-			  
+            &:hover{
+              animation:.3s icon;
+
+              @keyframes icon{
+                50%{
+                  transform: scale(1.2);
+                }
+                100%{
+                  transform: scale(1);
+                }
+              }
+            }
+          }
+          .vk, .yt{
+            width: 32px;
+            height: 32px;
           }
           .vk{
             background-image: url(../../assets/images/svg/vk.svg);
-			filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
-			  
-			  &:hover{
-				  filter: none;
-			  }
           }
           .yt{
             background-image: url(../../assets/images/svg/youtube.svg);
-            background-color: #fff;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            border-radius: 10px;
-			box-shadow: 0 0 2px rgba(0,0,0,0.5);
-			  &:hover{
-				  box-shadow: none;
-			  }
           }
         }
       }

@@ -1,6 +1,9 @@
 section{
   position: relative;
 
+  h2{
+    padding-top: 38px;
+  }
   &:before{
     content: "";
     position: absolute;

@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalService } from '../modal.service';
-import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-course',
@@ -8,14 +7,15 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./course.component.scss']
 })
 export class CourseComponent implements OnInit {
+  
+  lastVideo = "";
 
   @Input() course;
   constructor(
     private modalService: ModalService,
-    private sanitizer: DomSanitizer
   ) { }
 
-  timer = {}
+  timer: any = {}
 
   getTimer(){
     let countDownDate = new Date("Sep 1, 2018 00:00:00").getTime();
@@ -32,8 +32,8 @@ export class CourseComponent implements OnInit {
   onBuyBtnClick() {
     this.modalService.openModal("buy", this.course);
   }
+  
   ngOnInit() {
-    this.course.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/" + this.course.videoUrl);
     this.timer = this.getTimer();
 	  setInterval(() => {
       this.timer = this.getTimer();

@@ -1,5 +1,5 @@
 <div class="title">
-	До конца акции:
+	Скидки до -90% на все курсы до конца лета, осталось:
 </div>
 <div class="timer-wrap">
 	<span><span class="timer">{{timer.days}}</span> дней </span>
@@ -7,7 +7,8 @@
 	<span><span class="timer"><span *ngIf="timer.minutes < 10">0</span>{{timer.minutes}}</span> минут </span>
 	<span><span class="timer"><span *ngIf="timer.seconds < 10">0</span>{{timer.seconds}}</span> секунд </span>
 </div>
-<button [ngx-scroll-to]="'#courses'"
+<button routerLink=""
+        [ngx-scroll-to]="'#courses'"
         [ngx-scroll-to-offset]="-150">
 	Начать зарабатывать
 </button>

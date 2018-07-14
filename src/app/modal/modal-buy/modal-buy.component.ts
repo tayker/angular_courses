@@ -29,7 +29,7 @@ import { ModalService } from '../../modal.service';
 })
 export class ModalBuyComponent implements OnInit {
 
-  courseInfo: Object;
+  courseInfo: any;
 
   email: string = "";
   repeatEmail: string = "";

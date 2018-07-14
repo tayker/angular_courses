@@ -75,10 +75,9 @@ button{
   transition: .3s;
   transform: translate3d(0,0,0);
 	&:hover{
-		opacity: 0.7;
+		background-color: #ceb45c;
 	}
 	&:active{
-		opacity: 1;
 		filter: contrast(120%);
 	}
 }
@@ -133,6 +132,11 @@ button, input{
     background-size: cover;
     padding: 0;
     z-index: 1;
+    opacity: 0.75;
+    transition: .3s;
+    &:hover{
+      opacity: 1;
+    }
   }
   .title{
     font-size: 18px;
@@ -179,9 +183,42 @@ button, input{
       text-transform: none;
     }
     p{
-      font-size: 14px;
       color: rgb(0, 0, 0);
       line-height: 1.2;
+    }
+    ul{
+      li{
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        &:before{
+          content: '';
+          position: absolute;
+          left: 0;
+          width: 8px;
+          height: 8px;
+          background-color: #3d608a;
+          border-radius: 50%;
+          top: 6px;
+        }
+      }
+    }
+  }
+}
+.list{
+  margin: 10px 0;
+  li{
+    padding-left: 20px;
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background-color: #3d608a;
+      border-radius: 50%;
+      top: 4px;
     }
   }
 }

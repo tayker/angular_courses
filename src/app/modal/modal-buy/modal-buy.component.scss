@@ -15,6 +15,7 @@
       color: rgb(27, 32, 36);
       line-height: 1.125;
       margin: 0 0 10px 0;
+      font-weight: 400;
     }
 
   form{
@@ -93,6 +94,7 @@
           text-transform: uppercase;
           width: 100%;
           position: relative;
+          color: #000;
           &--webmoney{
             background-color: #036cb5;
             color: #fff;

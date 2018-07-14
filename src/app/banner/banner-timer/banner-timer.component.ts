@@ -9,7 +9,7 @@ export class BannerTimerComponent implements OnInit {
 
   constructor() { }
 
-  timer = {}
+  timer: any = {}
 
   getTimer(){
     let countDownDate = new Date("Sep 1, 2018 00:00:00").getTime();

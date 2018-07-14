@@ -6,6 +6,12 @@
   background-color: #34373b;
   padding: 14px 20px;
   position: relative;
+  
+  &:hover{
+    &:before{
+      top: -100%;
+    }
+  }
   &:before{
     content: '';
     position: absolute;
@@ -17,6 +23,7 @@
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: .3s;
   }
   button{
     position: absolute;

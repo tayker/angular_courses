@@ -1,7 +1,7 @@
 <section id="courses">
   <div class="container">
     <h2>
-      <a routerLink="">полезные навыки</a> <span class="current-link" *ngIf="isLoaded()" > &#62; {{ activeCourse.titleSecondary }} </span>
+      <a routerLink="">{{activeCourse.categoryTitle}}</a> <span class="current-link" *ngIf="isLoaded()" > &#62; {{ activeCourse.titleSecondary }} </span>
     </h2>
     <app-course *ngIf="isLoaded()" [course]="activeCourse"></app-course>
   </div>
